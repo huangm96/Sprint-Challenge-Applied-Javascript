@@ -13,7 +13,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
 .then(function (response) {
     
     console.log(response);
-    
+    document.querySelector(".topics").appendChild(createTopic("ALL"));
     const topic = response.data.topics;
     topic.forEach((t)=>{
         document.querySelector(".topics").appendChild(createTopic(t));
